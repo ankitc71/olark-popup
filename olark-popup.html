@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title>Chat</title>
+
+	<link rel="stylesheet" href="olark-popup.css" type="text/css" media="all">
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="olark-popup.js"></script>
+</head>
+
+<body>
+
+	<h1 id="status-message" class="loading"><span>Loading&hellip;</span></h1>
+	
+	<p id="operator-status" style="display: none;">Waiting for an operator to respond.</p>
+
+	<div id="log" style="display: none;">
+		<dl id="skeleton" style="display: none;">
+			<dt><img src="avatar.png" alt="Avatar"></dt>
+			<dd></dd>
+		</dl>
+	</div>
+	
+	<form action="#" style="display: none;">
+		<fieldset>
+			<legend>Chat</legend>
+			
+			<input value="Enter your question and hit Return&hellip;">
+		</fieldset>
+	
+		<p id="powered-by">Powered by <a href="http://www.olark.com/">Olark</a></p>
+	</form>
+
+	<div id="avatars" style="display: none;">	
+		<!-- <img src="..." alt="John Appleseed"> -->
+	</div>
+
+	<script type="text/javascript"> 
+	
+		var olarkID = 'XXXX-XXX-XX-XXXX'; /* Add your Olark ID here */
+		var visitor = 'John Appleseed'; /* Name of the user chatting, set dynamically from your application. */
+	
+		(function(d,u,o){window.olark={__k:o};var h=d.location.protocol=='https:'?'https://':'http://'; d.write(unescape("%3Cscript src='"+h+ u+"' type='text/javascript'%3E%3C/script%3E")); })(document,'static.olark.com/javascript/olark.js', olarkID);
+	
+	</script>
+
+</body>
+</html>

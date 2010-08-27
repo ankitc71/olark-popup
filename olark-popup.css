@@ -1,0 +1,170 @@
+/* Reset
+------------------------------ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	outline: 0;
+	background-color: transparent;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* Global Defaults
+------------------------------ */
+
+html,
+body {
+	height: 100%;
+}
+body {
+	background-color: #FFF;
+	font: normal small/1.5 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+a         { color: #000; text-decoration: underline; }
+a:hover   { text-decoration: none; }
+
+
+
+/* Popup
+------------------------------ */
+
+#habla_window_div {
+	display: none !important;
+}
+
+
+/* Status Message */
+
+#status-message {
+	position: absolute;
+	top: 50%; left: 0;
+	width: 100%;
+	margin-top: -1.5em;
+	text-align: center;
+}
+	#status-message span {
+		display: inline-block;
+		padding: .2em .6em;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		font-size: 1.1em;
+	}
+#status-message.loading span			{ background-color: #EEE; color: #999; }
+#status-message.unavailable span 	{ background-color: #FEE; color: #900; }
+
+
+/* Operator Status */
+
+#operator-status {
+	padding: 10px 20px;
+	border-bottom: 1px solid #DDD;
+	color: #AAA;
+	font-size: .85em;
+}
+
+
+/* Log */
+
+#log {
+	overflow: hidden;
+	overflow-y: scroll;
+}
+	#log dl {
+		display: block;
+		position: relative;
+		margin: 0;
+		padding: 10px 20px;
+		overflow: hidden;
+	}
+		#log dl dt {
+			display: block;
+			float: left;
+			width: 40px;
+			padding-right: 10px;
+			vertical-align: bottom;
+		}
+			#log dl dt img {
+				display: block;
+				border-radius: 2px;
+				-moz-border-radius: 2px;
+				-webkit-border-radius: 2px;
+			}
+		#log dl dd {
+			display: block;
+			position: relative;
+			margin: 0 0 .25em 50px;
+			padding: 0;
+			color: #333;
+		}
+		#log dl dd:last-child { margin-bottom: 0; }
+	
+		#log dl.operator {
+			background-color: #e8f9ff;
+		}
+			#log dl.operator dd {
+				color: #00445c;
+			}
+
+
+/* Form */
+
+form {
+	border-top: 1px solid #DDD;
+	background-color: #EEE;
+	overflow: hidden;
+}
+	form legend {
+		display: none;
+	}
+	form fieldset {
+		margin: 10px;
+		padding: 10px;
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		background-color: #FFF;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+		-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+		-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	}
+		form fieldset input {
+			display: block;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			background-color: transparent;
+			font: 1em/1.4 'Helvetica Neue', Arial, Helvetica, sans-serif;
+			outline: none;
+		}
+		
+	
+	/* Powered by Olark */
+	
+	form p {
+		padding: 0 0 10px;
+		color: #999;
+		font-size: .85em;
+		text-align: center;
+	}
+		form p a {
+			color: #D54F27;
+		}
