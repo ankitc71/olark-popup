@@ -1,0 +1,15 @@
+olark-popup is a replacement for Olark’s (http://www.olark.com) JavaScript chat popup. It works best when loaded as a plain, HTML popup window.
+
+Features:
+* Works out of the box, just add your Olark ID
+* Easy theming and customization
+* Avatar support
+
+Requirements:
+* jQuery 1.4
+* Free or paid Olark account
+
+How to use:
+* Open up olark-popup.html in your favorite code editor and add your Olark ID and avatars if needed.
+
+olark-popup is distributed under the MIT License.

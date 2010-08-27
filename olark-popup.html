@@ -32,17 +32,32 @@
 			<input value="Enter your question and hit Return&hellip;">
 		</fieldset>
 	
+		<!-- You can remove the following line only on Platinum plans and above, see http://www.olark.com/plans -->
 		<p id="powered-by">Powered by <a href="http://www.olark.com/">Olark</a></p>
 	</form>
 
-	<div id="avatars" style="display: none;">	
-		<!-- <img src="..." alt="John Appleseed"> -->
+	<div id="avatars" style="display: none;">
+		<!--
+		
+		How to use avatars:
+		
+		* 1. Go to your Olark account and set proper names for your operators
+		* 2. Add image tags to this container and set the alt properties according to your operator names
+		* 3. You can also add an avatar for the visitor/user
+		
+		If no matching avatar is found the default one (avatar.png) will be used, so make sure to customize that as well.
+		
+		<img src="..." alt="John Appleseed">
+		<img src="..." alt="Support Person #1">
+		...
+		
+		-->
 	</div>
 
 	<script type="text/javascript"> 
 	
 		var olarkID = 'XXXX-XXX-XX-XXXX'; /* Add your Olark ID here */
-		var visitor = 'John Appleseed'; /* Name of the user chatting, set dynamically from your application. */
+		var visitor = 'John Appleseed'; /* Name of the user chatting with your operators, will be visible in the IM client */
 	
 		(function(d,u,o){window.olark={__k:o};var h=d.location.protocol=='https:'?'https://':'http://'; d.write(unescape("%3Cscript src='"+h+ u+"' type='text/javascript'%3E%3C/script%3E")); })(document,'static.olark.com/javascript/olark.js', olarkID);
 	
