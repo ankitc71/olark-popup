@@ -16,9 +16,11 @@ var OlarkPopup = {
 		
 		olark.extend(function(api){
 			api.chat.updateVisitorNickname({
-				snippet: visitor,
+				snippet: visitorNickname,
 				hidesDefault: true
 			});
+			
+			api.chat.updateVisitorStatus({ snippet: visitorStatus });
 			
 			api.chat.onMessageToVisitor(function(event){
 				OlarkPopup.update('operator', event.message.nickname, event.message.body);
@@ -27,7 +29,7 @@ var OlarkPopup = {
 			});
 			
 			api.chat.onMessageToOperator(function(event){
-				OlarkPopup.update('visitor', visitor, event.message.body);
+				OlarkPopup.update('visitor', visitorNickname, event.message.body);
 			});
 			
 			api.chat.onOperatorsAvailable(function(){
@@ -111,7 +113,7 @@ var OlarkPopup = {
 				OlarkPopup.setOperatorText('You are chatting with ' + nickname);
 			} else {
 				var type 			= 'visitor';
-				var nickname 	= visitor;
+				var nickname 	= visitorNickname;
 			}
 				
 			OlarkPopup.update(type, nickname, $(this).find('.hbl_pal_main_fg').text());
